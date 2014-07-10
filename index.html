@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Asteroids</title>
+    <script src='movingobject.js'></script>
+    <script src='asteroid.js'></script>
+    <script src='ship.js'></script>
+    <script src="keymaster.js"></script>
+    <script src='game.js'></script>
+
+</head>
+<body>
+    <canvas width="800" height="600"></canvas>
+    <script>
+        var canvas = document.getElementsByTagName("canvas")[0];
+        ctx = canvas.getContext("2d");
+        var game = new Asteroids.Game(ctx);
+        game.start();
+    </script>
+</body>
+</html>
