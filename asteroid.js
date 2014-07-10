@@ -13,7 +13,7 @@
   };
   
   Asteroid.inherits(Asteroids.MovingObject);
-  Asteroid.COLOR = "red";
+  Asteroid.COLOR = "darkgray";
   Asteroid.RADII = [20, 10, 5];
   
   Asteroid.randomAsteroid = function(dimX, dimY) {

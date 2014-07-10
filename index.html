@@ -10,11 +10,22 @@
 
 </head>
 <body>
-    <canvas width="800" height="600"></canvas>
+  <img id="star_field" src ="numbra_star_field.jpg" width="800" height="600">
+    <canvas id="bg" width="800" height="600" style="position: absolute; z-index: 0">
+    </canvas>
+    <canvas id="fg" width="800" height="600" style="position: absolute; z-index: 1">
+    </canvas>
     <script>
-        var canvas = document.getElementsByTagName("canvas")[0];
-        ctx = canvas.getContext("2d");
-        var game = new Asteroids.Game(ctx);
+        var bg_canvas = document.getElementsByTagName("canvas")[0];
+        var fg_canvas = document.getElementsByTagName("canvas")[1];
+        var fg_ctx = fg_canvas.getContext("2d");
+        var bg_ctx = fg_canvas.getContext("2d");
+        var background = document.getElementById("star_field");
+        background.onload = function(){
+            bg_ctx.drawImage(background,0,0);   
+        }​
+        };
+        var game = new Asteroids.Game(fg_ctx);
         game.start();
     </script>
 </body>

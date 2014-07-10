@@ -22,5 +22,23 @@
     this.vel[1] += impulse[1];
   }
   
+  
+  var bulletSpeed = 5;
+  Ship.prototype.fireBulletUp = function() {
+    return new Asteroids.Bullet(0, -bulletSpeed);
+  }
+  
+  Ship.prototype.fireBulletDown = function() {
+    return new Asteroids.Bullet(0, bulletSpeed);
+  }
+  
+  Ship.prototype.fireBulletLeft = function() {
+    return new Asteroids.Bullet(bulletSpeed, 0);
+  }
+  
+  Ship.prototype.fireBulletRight = function() {
+    return new Asteroids.Bullet(-bulletSpeed, 0);
+  }
+  
 })(this);
   
